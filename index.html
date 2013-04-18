@@ -10,7 +10,7 @@
                 console.warn('init @ ' + Date())
                 main();
             };
-            head.js(CDN + 'jquery/1.8.3/jquery.min.js', '/lib/js/jq-con.js', './xsv2json.js', './script.js', Init);
+            head.js(CDN + 'jquery/1.8.3/jquery.min.js', '/lib/js/jq-con.js', './jq-xsv.js', './script.js', Init);
         </script>
     </head>
     <body>
@@ -23,7 +23,7 @@
         <div id="message"></div>
         <form id="convertForm" name="convertForm" onsubmit="return false;">
             <p>
-                <label for="xsv">Data:</label>
+                <label for="vals">Data:</label>
                 <br>
                 <textarea cols="160" id="vals" name="vals" rows="20"></textarea>
             </p>
@@ -73,20 +73,3 @@ today	WF Today piece	https://www.wellsfargo.com/downloads/pdf/about/wellsfargoto
         </section>
     </body>
 </html>
-<!-- <script src="json/json2.js"> </script>
-     * csv-to-json: A utility that converts data format from CSV to JSON.
-     * Copyright (C) 2009-2012 Christopher Parker <http://www.cparker15.com/>
-     *
-     * csv-to-json is free software: you can redistribute it and/or modify
-     * it under the terms of the GNU Lesser General Public License as published by
-     * the Free Software Foundation, either version 3 of the License, or
-     * (at your option) any later version.
-     *
-     * csv-to-json is distributed in the hope that it will be useful,
-     * but WITHOUT ANY WARRANTY; without even the implied warranty of
-     * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-     * GNU Lesser General Public License for more details.
-     *
-     * You should have received a copy of the GNU Lesser General Public License
-     * along with csv-to-json.  If not, see <http://www.gnu.org/licenses/>.
--->

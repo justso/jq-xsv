@@ -81,7 +81,7 @@
                         objArr[i - 1][valsRows[0][j]] = valsRows[i][j];
                     }
                 }
-                jsonText = JSON.stringify(objArr, null, "\t");
+                jsonText = JSON.stringify(objArr, null, '\t');
                 f.elements.json.value = jsonText;
             }
         }
