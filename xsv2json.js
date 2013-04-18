@@ -5,8 +5,7 @@
 (function ($) {
 
     var valsRows = [],
-        objArr = [],
-        benchmarkStart, benchmarkParseEnd, benchmarkObjEnd, benchmarkJsonEnd, benchmarkPopulateEnd;
+        objArr = [];
 
     function setMessage(message, error) {
         document.getElementById("message").innerHTML = '<p>' + message + '</p>';
@@ -72,7 +71,6 @@
             message = "Enter data text below.";
         }
         if (!error) {
-            benchmarkStart = new Date();
             valsRows = valsText.split(/[\r\n]/g); // split into rows
             // get rid of empty rows
             for (i = 0; i < valsRows.length; i++) {
@@ -89,7 +87,6 @@
                 for (i = 0; i < valsRows.length; i++) {
                     valsRows[i] = parseXSVLine(sep, valsRows[i]);
                 }
-                benchmarkParseEnd = new Date();
                 for (i = 1; i < valsRows.length; i++) {
                     if (valsRows[i].length > 0) {
                         objArr.push({});
@@ -98,43 +95,11 @@
                         objArr[i - 1][valsRows[0][j]] = valsRows[i][j];
                     }
                 }
-                benchmarkObjEnd = new Date();
                 jsonText = JSON.stringify(objArr, null, "\t");
-                benchmarkJsonEnd = new Date();
                 f.elements.json.value = jsonText;
-                benchmarkPopulateEnd = new Date();
-                message = getBenchmarkResults();
             }
         }
         setMessage(message, error);
-    }
-
-    function getBenchmarkResults() {
-        var message = [],
-            totalTime = benchmarkPopulateEnd.getTime() - benchmarkStart.getTime(),
-            timeDiff = (benchmarkParseEnd.getTime() - benchmarkStart.getTime()),
-            mostTime = "parsing text";
-        if ((benchmarkObjEnd.getTime() - benchmarkParseEnd.getTime()) > timeDiff) {
-            timeDiff = (benchmarkObjEnd.getTime() - benchmarkParseEnd.getTime());
-            mostTime = "converting to objects";
-        }
-        if ((benchmarkJsonEnd.getTime() - benchmarkObjEnd.getTime()) > timeDiff) {
-            timeDiff = (benchmarkJsonEnd.getTime() - benchmarkObjEnd.getTime());
-            mostTime = "building JSON text";
-        }
-        if ((benchmarkPopulateEnd.getTime() - benchmarkJsonEnd.getTime()) > timeDiff) {
-            timeDiff = (benchmarkPopulateEnd.getTime() - benchmarkJsonEnd.getTime());
-            mostTime = "populating JSON text";
-        }
-        message.concat([valsRows.length, " line", (valsRows.length > 1 ? 's' : ''),
-                        " converted into ", objArr.length,
-                        " object", (objArr.length > 1 ? 's' : ''),
-                        " in ", (totalTime / 1000),
-                        " seconds, with an average of ", ((totalTime / 1000) / valsRows.length),
-                        " seconds per object. Most of the time was spent on ", mostTime,
-                        ", which took ", (timeDiff / 1000),
-                        " seconds."]);
-        return message;
     }
 
     $.fn.xsv = valsToJson;
