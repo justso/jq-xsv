@@ -1,5 +1,5 @@
-/*jslint es5:true, white:false  */
-/*globals clog */
+/*jslint es5:true, white:false */
+/*globals $, clog */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 function main() {

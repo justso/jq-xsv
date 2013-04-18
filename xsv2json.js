@@ -7,15 +7,6 @@
     var valsRows = [],
         objArr = [];
 
-    function setMessage(message, error) {
-        $('#message').innerHTML = '<p>' + message + '</p>';
-        if (error) {
-            $('#message').addClass('error');
-        } else {
-            $('#message').removeClass('error');
-        }
-    }
-
     function parseXSVLine(sep, line) {
         var i, j, chunk, quote;
 
@@ -59,19 +50,14 @@
     }
 
     function valsToJson(sep) {
-        var message = '',
-            error = false,
-            f = document.forms.convertForm,
+        var f = document.forms.convertForm,
             valsText = f.elements.vals.value,
             jsonText = '',
             i, j;
 
-        setMessage(message, error);
         if (valsText === '') {
-            error = true;
-            message = "Enter data text below.";
-        }
-        if (!error) {
+            throw new Error('Missing source data.');
+        } else {
             valsRows = valsText.split(/[\r\n]/g); // split into rows
             // get rid of empty rows
             for (i = 0; i < valsRows.length; i++) {
@@ -81,8 +67,7 @@
                 }
             }
             if (valsRows.length < 2) {
-                error = true;
-                message = "The data text MUST have a header row!";
+                throw new Error('Data missing header row?');
             } else {
                 objArr = [];
                 for (i = 0; i < valsRows.length; i++) {
@@ -100,7 +85,6 @@
                 f.elements.json.value = jsonText;
             }
         }
-        setMessage(message, error);
     }
 
     $.fn.xsv = valsToJson;
