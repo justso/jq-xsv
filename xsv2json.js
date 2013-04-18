@@ -1,5 +1,5 @@
-/*jslint es5:true, white:false  */
-/*globals document */
+/*jslint es5:true, white:false */
+/*globals document, jQuery, window */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 (function ($) {
@@ -8,7 +8,7 @@
         objArr = [];
 
     function setMessage(message, error) {
-        document.getElementById("message").innerHTML = '<p>' + message + '</p>';
+        $('#message').innerHTML = '<p>' + message + '</p>';
         if (error) {
             $('#message').addClass('error');
         } else {
@@ -18,6 +18,7 @@
 
     function parseXSVLine(sep, line) {
         var i, j, chunk, quote;
+
         line = line.split(sep);
         // check for splits performed inside quoted strings and correct if needed
         for (i = 0; i < line.length; i++) {
@@ -46,8 +47,7 @@
             }
         }
         for (i = 0; i < line.length; i++) {
-            // remove leading/trailing whitespace
-            line[i] = line[i].replace(/^[\s]*|[\s]*$/g, '');
+            line[i] = $.trim(line[i]);
             // remove leading/trailing quotes
             if (line[i].charAt(0) === '"') {
                 line[i] = line[i].replace(/^"|"$/g, '');
@@ -65,6 +65,7 @@
             valsText = f.elements.vals.value,
             jsonText = '',
             i, j;
+
         setMessage(message, error);
         if (valsText === '') {
             error = true;
