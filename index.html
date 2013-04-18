@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>xsv2json</title>
+        <link href="style.css" rel="stylesheet">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.min.js"></script>
+        <script>
+            var CDN = 'http://cdnjs.cloudflare.com/ajax/libs/';
+            function Init() {
+                console.warn('init @ ' + Date())
+                main();
+            };
+            head.js(CDN + 'jquery/1.8.3/jquery.min.js', '/lib/js/jq-con.js', './xsv2json.js', './script.js', Init);
+        </script>
+    </head>
+    <body>
+        <h3>Notes:</h3>
+        <ul>
+            <li>The data text MUST have a header row.</li>
+            <li>This utility does not currently check for escaped quotes inside of like quotes (e.g.: <code>"foo, \"bar\" baz"</code>).</li>
+        </ul>
+        <hr>
+        <div id="message"></div>
+        <form id="convertForm" name="convertForm" onsubmit="return false;">
+            <p>
+                <label for="xsv">Data:</label>
+                <br>
+                <textarea cols="160" id="vals" name="vals" rows="20"></textarea>
+            </p>
+            <p>
+                <label for="json">JSON:</label>
+                <br>
+                <textarea cols="160" id="json" name="json" readonly="readonly" rows="20"></textarea>
+            </p>
+            <input onclick="Xsv(',');" type="button" value="Comma Sep'd">
+            <input onclick="Xsv('\t');" type="button" value="Tab Sep'd">
+            <input type="reset">
+        </form>
+        <hr>
+        <section style="font-family: monospace; white-space: pre;">vals2json
+<button>sample CSV</button><textarea class="load">
+key,text,src
+727872,"Space is limited, [RSVP here]",http://www.wellsfargomedia.com/sibos2012/email/727872/index.html
+727874,[Booth reception invite],http://www.wellsfargomedia.com/sibos2012/email/727874/index.html
+734818,"Space is limited, [RSVP here]",http://www.wellsfargomedia.com/sibos2012/email/734818/index.html
+cem,CEMINA,http://www.cemina.org.br/english/
+h4h,Habitat for Humanity International,http://www.habitat.org/
+id-104,[Session details] ,http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=104
+id-124,[Session details],http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=124
+id-279,[Session details] ,http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=279
+id-286,[Session details] ,http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=286
+jen,JEN,http://www.jen-npo.org/en/index.php
+social,2011 social responsibility report,https://www.wellsfargo.com/downloads/pdf/about/csr/reports/wf2011social_responsibility_summary.pdf
+stc,Save the Children,http://www.savethechildren.org/
+today,WF Today piece,https://www.wellsfargo.com/downloads/pdf/about/wellsfargotoday.pdf
+            </textarea>
+<button>sample TSV</button><textarea class="load">
+key	text	src
+727872	Space is limited, [RSVP here]	http://www.wellsfargomedia.com/sibos2012/email/727872/index.html
+727874	[Booth reception invite]	http://www.wellsfargomedia.com/sibos2012/email/727874/index.html
+734818	Space is limited, [RSVP here]	http://www.wellsfargomedia.com/sibos2012/email/734818/index.html
+cem	CEMINA	http://www.cemina.org.br/english/
+h4h	Habitat for Humanity International	http://www.habitat.org/
+id-104	[Session details] 	http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=104
+id-124	[Session details]	http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=124
+id-279	[Session details] 	http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=279
+id-286	[Session details] 	http://www.sibos.com/conferencedata/pages/session_details_all.page?sessionID=286
+jen	JEN	http://www.jen-npo.org/en/index.php
+social	2011 social responsibility report	https://www.wellsfargo.com/downloads/pdf/about/csr/reports/wf2011social_responsibility_summary.pdf
+stc	Save the Children	http://www.savethechildren.org/
+today	WF Today piece	https://www.wellsfargo.com/downloads/pdf/about/wellsfargotoday.pdf
+            </textarea>
+        </section>
+    </body>
+</html>
+<!-- <script src="json/json2.js"> </script>
+     * csv-to-json: A utility that converts data format from CSV to JSON.
+     * Copyright (C) 2009-2012 Christopher Parker <http://www.cparker15.com/>
+     *
+     * csv-to-json is free software: you can redistribute it and/or modify
+     * it under the terms of the GNU Lesser General Public License as published by
+     * the Free Software Foundation, either version 3 of the License, or
+     * (at your option) any later version.
+     *
+     * csv-to-json is distributed in the hope that it will be useful,
+     * but WITHOUT ANY WARRANTY; without even the implied warranty of
+     * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     * GNU Lesser General Public License for more details.
+     *
+     * You should have received a copy of the GNU Lesser General Public License
+     * along with csv-to-json.  If not, see <http://www.gnu.org/licenses/>.
+-->

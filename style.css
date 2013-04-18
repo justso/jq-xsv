@@ -1,0 +1,7 @@
+.error {
+    font-weight: bold;
+    color: #F00;
+}
+.load {
+    display: none;
+}
