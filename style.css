@@ -5,3 +5,7 @@
 .load {
     display: none;
 }
+section {
+    font-family: monospace;
+    white-space: pre;
+}

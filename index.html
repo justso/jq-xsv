@@ -6,11 +6,11 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.min.js"></script>
         <script>
             var CDN = 'http://cdnjs.cloudflare.com/ajax/libs/';
+            head.js(CDN + 'jquery/1.8.3/jquery.min.js', '/lib/js/jq-con.js', './jq-xsv.js', './script.js', Init);
             function Init() {
-                console.warn('init @ ' + Date())
+                console.warn('init @ ' + Date());
                 main();
             };
-            head.js(CDN + 'jquery/1.8.3/jquery.min.js', '/lib/js/jq-con.js', './jq-xsv.js', './script.js', Init);
         </script>
     </head>
     <body>
@@ -37,11 +37,10 @@
             <input type="reset">
         </form>
         <hr>
-        <section style="font-family: monospace; white-space: pre;">vals2json
+        <section>vals2json
 <button>sample CSV</button><textarea class="load">
 key,text,src
-727872,"Space is limited,
-[RSVP here]",http://www.wellsfargomedia.com/sibos2012/email/727872/index.html
+727872,"Space is limited, [RSVP here]",http://www.wellsfargomedia.com/sibos2012/email/727872/index.html
 727874,[Booth reception invite],http://www.wellsfargomedia.com/sibos2012/email/727874/index.html
 734818,"Space is limited, [RSVP here]",http://www.wellsfargomedia.com/sibos2012/email/734818/index.html
 cem,CEMINA,http://www.cemina.org.br/english/
@@ -57,8 +56,7 @@ today,WF Today piece,https://www.wellsfargo.com/downloads/pdf/about/wellsfargoto
             </textarea>
 <button>sample TSV</button><textarea class="load">
 key	text	src
-727872	Space is limited,
-[RSVP here]	http://www.wellsfargomedia.com/sibos2012/email/727872/index.html
+727872	Space is limited, [RSVP here]	http://www.wellsfargomedia.com/sibos2012/email/727872/index.html
 727874	[Booth reception invite]	http://www.wellsfargomedia.com/sibos2012/email/727874/index.html
 734818	Space is limited, [RSVP here]	http://www.wellsfargomedia.com/sibos2012/email/734818/index.html
 cem	CEMINA	http://www.cemina.org.br/english/
