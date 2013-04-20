@@ -3,15 +3,39 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 function main() {
-    $('.load').each(function () {
+    $('.load').each(function() {
         var me = $(this),
             bt = me.prev();
         bt.text('Load ' + bt.text());
-        bt.on('click', function () {
+        bt.on('click', function() {
             $('#vals').text(me.text());
         });
     });
 }
+
+var tests = {
+    mix: ['begin', //
+    'lf', '\n', //
+    'cr', '\r', //
+    '2lf', '\n\n', //
+    '2cr', '\r\r', //
+    'lfcr', '\n\r', //
+    'crlf', '\r\n', //
+    '2lf2cr', '\n\n\r\r', //
+    '2cr2lf', '\r\r\n\n', //
+    'alts', '\r\n\n\r\r\n\n\r', //
+    'end', //
+    ].join('>\n<'),
+    pat1: [/\r/g, '\n'],
+    pat2: [/\n{2,}/g, '.\n'],
+    fmix: function() {
+        var str = this.mix;
+        str = str.replace(this.pat1[0], this.pat1[1]);
+        str = str.replace(this.pat2[0], this.pat2[1]);
+        return str;
+    },
+};
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /* LIFTED FROM

@@ -50,24 +50,24 @@
 
     function valsToJson(sep) {
         var f = document.forms.convertForm,
-            valsText = f.elements.vals.value,
+            valsText = $.trim(f.elements.vals.value),
             jsonText = '';
-        $('html').removeClass('error');
+        setError();
         try {
             if (valsText === '') {
                 throw new Error('Missing source data.');
             }
-            if (sep === ',') {
-                valsText = reQuote(valsText); //    preserve gaps
+            if (sep === ',') { // preserve gaps
+                valsText = reQuote(valsText);
             }
-            valsRows = valsText.split(/[\r\n]/g); // split into rows
+
+            // use standard line breaks
+            valsText = valsText.replace(/\r/g, '\n');
             // get rid of empty rows
-            $.each(valsRows, function (i, e) {
-                if ($.trim(valsRows[i]) === '') {
-                    valsRows.splice(i, 1);
-                    i--;
-                }
-            });
+            valsText = valsText.replace(/\n{2,}/g, '\n');
+            // split into rows
+            valsRows = valsText.split(/\n/g);
+
             if (valsRows.length < 2) {
                 throw new Error('Data missing header row?');
             }
@@ -87,8 +87,16 @@
             jsonText = JSON.stringify(objArr, null, '\t');
             f.elements.json.value = jsonText;
         } catch (err) {
+            setError(err);
+        }
+    }
+
+    function setError(err) {
+        if (err) {
             $('html').addClass('error');
             console.error(err.toString());
+        } else {
+            $('html').removeClass('error');
         }
     }
 
