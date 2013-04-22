@@ -7,9 +7,13 @@ div {
     margin-left: 22em;
 }
 nav {
+    background-color: #777;
     border: 2px solid green;
     position: fixed;
     width: 20em;
+}
+h2, h3 {
+    margin: 1em 0 -0.5em 1em;
 }
 section {
     border: 2px solid green;
@@ -17,6 +21,7 @@ section {
 }
 article {
     border: 1px solid gray;
+    margin: 1em;
 }
 p {
     margin: 0;
@@ -32,10 +37,12 @@ button a {
 }
 
 nav h4 {
-    background-color: pink;
+    background-color: #ccc;
     clear: both;
+    color: white;
+    margin: 0;
 }
 nav p {
-    background-color: #ccc;
+    background-color: #aaa;
     clear: both;
 }
