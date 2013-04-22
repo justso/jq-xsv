@@ -1,0 +1,19 @@
+html {
+    font-family: Georgia;
+    font-size: 11px;
+}
+div {
+    border: 3px solid red;
+}
+section {
+    border: 2px solid green;
+    margin: 1em;
+}
+article {
+    border: 1px solid gray;
+}
+p {
+/*    font-family: monospace;
+    white-space: pre;
+*/
+}

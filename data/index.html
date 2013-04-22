@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>data</title>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.min.js"></script>
+    <script>
+        var CDN = 'http://cdnjs.cloudflare.com/ajax/libs/',
+            DATA = {};
+
+        function Init() {
+            console.warn('init @ ' + Date())
+            DATA = {
+                Compositions: Compositions,
+                Giving: Giving,
+                Support: Support,
+            };
+            main();
+        };
+        head.js(CDN + 'jquery/1.8.3/jquery.min.js', 'script.js',
+        'data/Compositions.json','data/Giving.json','data/Support.json', Init);
+    </script>
+</head>
+<body>
+<pre>
+data
+</pre>
+</body>
+</html>
