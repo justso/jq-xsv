@@ -1,9 +1,9 @@
 var Components = {
-    COMPS: [{
+    Comps: [{
         "key": "footer",
         "content": "%_BLURBS_slug + %_BLURBS_share"
     }],
-    EVENTS: [{
+    Events: [{
         "key": "celebrate",
         "order": "1",
         "day": "Sunday, October 28",
@@ -74,7 +74,7 @@ var Components = {
         "place": "Conference room 2",
         "link": "%_LINKS_id-104"
     }],
-    PEEPS: [{
+    Peeps: [{
         "key": "george",
         "Speakers": "George Doolittle",
         "title": "Head of Wells Fargo Global Payment Services",

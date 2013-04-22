@@ -5,10 +5,10 @@
 function main() {
     console.log('main');
     DATA = {
-        Compositions: Compositions,
+        Support: Support,
         Components: Components,
         Giving: Giving,
-        Support: Support,
+        Compositions: Compositions,
     };
     var nav = $('nav');
 
@@ -54,16 +54,16 @@ function main() {
 
     $.each(DATA, function (i1, DIV) {
         var div = $('<div>').appendTo('body');
-        anchor(i1, $('<h1>').text(i1).appendTo(div), '<h4>');
+        anchor(['doc', i1], $('<h1>').text(i1).appendTo(div), '<h4>');
 
         $.each(DIV, function (i2, SEC) {
             var sec = $('<section>').appendTo(div);
-            anchor(i2, $('<h2>').text(i2).insertBefore(sec), '<p>');
+            anchor([i1, i2], $('<h2>').text(i2).insertBefore(sec), '<p>');
 
             $.each(SEC, function (i3, ART) {
                 var art = $('<article>').appendTo(sec);
                 i3 = keyhoist(SEC, i3);
-                anchor([i2, i3], $('<h3>').text('article ' + i3).insertBefore(art));
+                anchor([i2, i3], $('<h3>').text(i2 + '/' + i3).insertBefore(art));
 
                 textify(ART, art);
             });

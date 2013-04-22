@@ -65,23 +65,6 @@ var Giving = {
         "heading": "To learn more, visit ",
         "content": "[habitat.org]. %_LINKS_h4hi"
     }],
-    'Program Results': [{
-        "blurb": "CEMINA — helps farmers adapt to climate change in Brazil.",
-        "results": "Result: $1,500 (15%)",
-        "link": "#cemina"
-    }, {
-        "blurb": "Habitat for Humanity International — provides housing for low-income families around the world.",
-        "results": "Result: $2,000 (20%)",
-        "link": "#h4h1"
-    }, {
-        "blurb": "JEN — provides economical and mental support to people who have been stricken with hardship.",
-        "results": "Result: $2,300 (23%)",
-        "link": "#jen"
-    }, {
-        "blurb": "Save the Children — works to resolve struggles that children face every day — poverty, hunger, illiteracy, and disease. ",
-        "results": "Result: $4,200 (42%)",
-        "link": "#stc"
-    }],
     'Save the Children': [{
         "heading": "Save the Children",
         "content": "When disaster strikes around the world, Save the Children is there to provide immediate assistance and save lives with food, medical care, and education. Save the Children remains to help communities rebuild through long-term recovery programs. On an ongoing basis, Save the Children works to resolve struggles that children face every day — poverty, hunger, illiteracy, and disease. Save the Children operates in 120 countries on six continents, serving and providing support to 64 million children."
@@ -100,5 +83,22 @@ var Giving = {
     }, {
         "heading": "To learn more, visit ",
         "content": "[savethechildren.org]. %_LINKS_stc"
+    }],
+    'Program Results': [{
+        "blurb": "CEMINA — helps farmers adapt to climate change in Brazil.",
+        "results": "Result: $1,500 (15%)",
+        "link": "#cemina"
+    }, {
+        "blurb": "Habitat for Humanity International — provides housing for low-income families around the world.",
+        "results": "Result: $2,000 (20%)",
+        "link": "#h4h1"
+    }, {
+        "blurb": "JEN — provides economical and mental support to people who have been stricken with hardship.",
+        "results": "Result: $2,300 (23%)",
+        "link": "#jen"
+    }, {
+        "blurb": "Save the Children — works to resolve struggles that children face every day — poverty, hunger, illiteracy, and disease. ",
+        "results": "Result: $4,200 (42%)",
+        "link": "#stc"
     }],
 };
