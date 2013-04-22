@@ -6,6 +6,7 @@ function main() {
     console.log('main');
     DATA = {
         Compositions: Compositions,
+        Components: Components,
         Giving: Giving,
         Support: Support,
     };
