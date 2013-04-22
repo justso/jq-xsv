@@ -1,12 +1,12 @@
 var Support = {
-    _BLURBS: [{
+    BLURBS: [{
         "key": "slug",
         "content": "© 2012 Wells Fargo Bank, N.A. All rights reserved. ECG-727744"
     }, {
         "key": "share",
         "content": "&lt;div id=\&quot;sharebar\&quot;&gt;\\n &lt;script src=\&quot;http://w.sharethis.com/button/buttons.js\&quot;&gt;&lt;/script&gt;\\n &lt;p class=\&quot;cap\&quot;&gt;Share this page &lt;!-- --&gt;\\n &lt;span id=\&quot;st_twitter\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_linkedin\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_email\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_facebook\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_googleplus\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_pinterest\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;/p&gt;\\n &lt;s cript src=\&quot;../script/share.js\&quot;&gt;&lt;/script&gt;\\n &lt;/div&gt;"
     }],
-    _FILES: [{
+    FILES: [{
         "key": "map",
         "group": "images",
         "subgroup": "misc",
@@ -79,7 +79,7 @@ var Support = {
         "text": "[View bio] (PDF*)",
         "path": "media/Steve_Ellis-bio.pdf"
     }],
-    _LINKS: [{
+    LINKS: [{
         "key": "727872",
         "text": "Space is limited, [RSVP here]",
         "src": "http://www.wellsfargomedia.com/sibos2012/email/727872/index.html"

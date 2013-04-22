@@ -1,5 +1,5 @@
 var Compositions = {
-    _INDEX: [{
+    INDEX: [{
         "page": "home",
         "index": "1"
     }, {
@@ -44,10 +44,10 @@ var Compositions = {
         "content": "Learn more about Wells Fargo"
     }, {
         "heading": "*",
-        "content": "LINKS/ today"
+        "content": "%_LINKS_today"
     }, {
         "heading": "*",
-        "content": "LINKS/ social"
+        "content": "%_LINKS_social"
     }],
     EXPLORE: [{
         "heading": "Explore Osaka",
@@ -86,10 +86,10 @@ var Compositions = {
         "content": "Thank you for visiting the Wells Fargo Sibos webpage. Our Global Financial Institutions team has an exciting program lined up for you during the week of the conference, and we look forward to seeing you in Osaka.\\n\\nFor more information about Sibos 2012, please visit the official Sibos website at sibos.com."
     }, {
         "heading": "Sibos events",
-        "content": "REF:EVENTS/ celebrate\\nREF:EVENTS/ trans\\nREF:EVENTS/ booth"
+        "content": "%_EVENTS_celebrate\\n%_EVENTS_trans\\n%_EVENTS_booth"
     }, {
         "heading": "Visit our booth",
-        "content": "REF:FILES/ 4B06"
+        "content": "%_FILES_4B06"
     }, {
         "heading": "Get involved",
         "content": "Wells Fargo is proud to partner with GlobalGiving.org again to offer you a wonderful program that gives back to our communities"
@@ -107,12 +107,12 @@ var Compositions = {
     }],
     VISIT: [{
         "heading": "Visit our booth",
-        "content": "As a repeat Sibos exhibitor, we’re proud to give our customers an opportunity to visit and interact with our business leaders and relationship managers at our booth, No. 4B06.\\nREF:FILES/ map  |  REF:FILES/ booth\\n\\nStop by to take your picture in front of the Buffalo Bill stagecoach and learn more about our history. And “check in” with your smart phone or PDA device to receive a free gift."
+        "content": "As a repeat Sibos exhibitor, we’re proud to give our customers an opportunity to visit and interact with our business leaders and relationship managers at our booth, No. 4B06.\\n%_FILES_map  |  %_FILES_booth\\n\\nStop by to take your picture in front of the Buffalo Bill stagecoach and learn more about our history. And “check in” with your smart phone or PDA device to receive a free gift."
     }, {
         "heading": "Events",
-        "content": "We’re hosting a variety of events during the Sibos conference, including our annual Sibos Celebration reception at the elegant Taiko-en, and a booth welcome reception.\\n\\nREF:EVENTS/ celebrate\\nREF:EVENTS/ trans\\nREF:EVENTS/ booth"
+        "content": "We’re hosting a variety of events during the Sibos conference, including our annual Sibos Celebration reception at the elegant Taiko-en, and a booth welcome reception.\\n\\n%_EVENTS_celebrate\\n%_EVENTS_trans\\n%_EVENTS_booth"
     }, {
         "heading": "Speakers",
-        "content": "PEEPS/ George\\nREF:EVENTS/ pmpg\\nREF:EVENTS/ payments\\nREF:EVENTS/ global\\n\\nPEEPS/ Steve\\nREF:EVENTS/ brave"
+        "content": "REF:PEEPS/ George\\n%_EVENTS_pmpg\\n%_EVENTS_payments\\n%_EVENTS_global\\n\\nREF:PEEPS/ Steve\\n%_EVENTS_brave"
     }],
 };
