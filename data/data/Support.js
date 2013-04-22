@@ -38,10 +38,8 @@ var Support = {
         "Speaker": "NA",
         "start": "3:00 p.m.",
         "end": "4:00 p.m.",
-        "place": "Katsura Room L5; Hyatt Regency Hotel"
-    }, {
-        "key": "Please speak with your relationship manager about availability.\"",
-        "order": "LINKS/ 734818"
+        "place": "Katsura Room L5; Hyatt Regency Hotel\\nPlease speak with your relationship manager about availability.",
+        "link": "LINKS/ 734818"
     }, {
         "key": "booth",
         "order": "4",
