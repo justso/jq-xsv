@@ -19,7 +19,7 @@ var Giving = {
         "content": "Reduce poverty and educate small farmers and communities about climate change."
     }, {
         "heading": "To learn more, visit ",
-        "content": "[cemina.org]. %_LINKS_cem"
+        "content": "[cemina.org]. %_Support_LINKS_cem"
     }],
     Habitat: [{
         "heading": "Habitat for Humanity International",
@@ -41,7 +41,7 @@ var Giving = {
         "content": "In 2011, the Latin American and Caribbean regions saw 5,734 new homes built, 3,478 homes rehabilitated, and 5,422 more repaired."
     }, {
         "heading": "To learn more, visit ",
-        "content": "[habitat.org]. %_LINKS_h4hi"
+        "content": "[habitat.org]. %_Support_LINKS_h4hi"
     }],
     JEN: [{
         "heading": "JEN",
@@ -63,7 +63,7 @@ var Giving = {
         "content": "Assess needs to improve the quality of life of people affected by earthquakes and tsunami through long-term planning."
     }, {
         "heading": "To learn more, visit ",
-        "content": "[habitat.org]. %_LINKS_h4hi"
+        "content": "[habitat.org]. %_Support_LINKS_h4hi"
     }],
     'Save the Children': [{
         "heading": "Save the Children",
@@ -82,7 +82,7 @@ var Giving = {
         "content": "Continues to work with children in the Dadaab refugee camp (the world’s largest refugee camp) who have been deeply affected by the ongoing civil war in Somalia."
     }, {
         "heading": "To learn more, visit ",
-        "content": "[savethechildren.org]. %_LINKS_stc"
+        "content": "[savethechildren.org]. %_Support_LINKS_stc"
     }],
     'Program Results': [{
         "blurb": "CEMINA — helps farmers adapt to climate change in Brazil.",

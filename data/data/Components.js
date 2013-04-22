@@ -1,7 +1,7 @@
 var Components = {
     Comps: [{
         "key": "footer",
-        "content": "%_BLURBS_slug + %_BLURBS_share"
+        "content": "%_Support_BLURBS_slug + %_Support_BLURBS_share"
     }],
     Events: [{
         "key": "celebrate",
@@ -12,7 +12,7 @@ var Components = {
         "start": "5:00 p.m.",
         "end": "8:00 p.m.",
         "place": "Taiko-en",
-        "link": "%_LINKS_727872"
+        "link": "%_Support_LINKS_727872"
     }, {
         "key": "brave",
         "order": "2",
@@ -22,7 +22,7 @@ var Components = {
         "start": "4:00 p.m.",
         "end": "5:00 p.m.",
         "place": "",
-        "link": "%_LINKS_id-124"
+        "link": "%_Support_LINKS_id-124"
     }, {
         "key": "trans",
         "order": "3",
@@ -32,7 +32,7 @@ var Components = {
         "start": "3:00 p.m.",
         "end": "4:00 p.m.",
         "place": "Katsura Room L5; Hyatt Regency Hotel\\nPlease speak with your relationship manager about availability.",
-        "link": "%_LINKS_734818"
+        "link": "%_Support_LINKS_734818"
     }, {
         "key": "booth",
         "order": "4",
@@ -42,7 +42,7 @@ var Components = {
         "start": "4:00 p.m.",
         "end": "5:30 p.m.",
         "place": "Wells Fargo booth No. 4B06, Hall 4",
-        "link": "%_LINKS_727874"
+        "link": "%_Support_LINKS_727874"
     }, {
         "key": "pmpg",
         "order": "5",
@@ -52,7 +52,7 @@ var Components = {
         "start": "9:30 a.m.",
         "end": "10:30 a.m.",
         "place": "Community room 3",
-        "link": "%_LINKS_id-286"
+        "link": "%_Support_LINKS_id-286"
     }, {
         "key": "payments",
         "order": "6",
@@ -62,7 +62,7 @@ var Components = {
         "start": "4:00 p.m.",
         "end": "5:00 p.m.",
         "place": "Community room 2",
-        "link": "%_LINKS_id-279"
+        "link": "%_Support_LINKS_id-279"
     }, {
         "key": "global",
         "order": "7",
@@ -72,21 +72,21 @@ var Components = {
         "start": "11:00 a.m.",
         "end": "12:00 p.m.",
         "place": "Conference room 2",
-        "link": "%_LINKS_id-104"
+        "link": "%_Support_LINKS_id-104"
     }],
     Peeps: [{
         "key": "george",
         "Speakers": "George Doolittle",
         "title": "Head of Wells Fargo Global Payment Services",
-        "src.pic": "%_FILES_george",
-        "src.vid": "%_FILES_george-vid",
-        "src.bio": "%_FILES_george-bio"
+        "src.pic": "%_Support_FILES_george",
+        "src.vid": "%_Support_FILES_george-vid",
+        "src.bio": "%_Support_FILES_george-bio"
     }, {
         "key": "steve",
         "Speakers": "Steve Ellis",
         "title": "Head of Wells Fargo Wholesale Services",
-        "src.pic": "%_FILES_steve",
-        "src.vid": "%_FILES_steve-vid",
-        "src.bio": "%_FILES_steve-bio"
+        "src.pic": "%_Support_FILES_steve",
+        "src.vid": "%_Support_FILES_steve-vid",
+        "src.bio": "%_Support_FILES_steve-bio"
     }],
 };
