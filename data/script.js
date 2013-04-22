@@ -10,6 +10,7 @@ function main() {
         Giving: Giving,
         Support: Support,
     };
+    var nav = $('nav');
 
     function textify(obj, ele) {
         $.each(obj, function(i, e) {
@@ -20,24 +21,44 @@ function main() {
     }
     function keyhoist(arr, num) {
         var key = arr[num].key;
-        clog(key, num)
+        if (key) {
+            clog(key, num)
+            arr[key] = arr[num];
+        }
         return key || (num + 1);
     }
-    $.each(DATA, function(i, DIV) {
+    $.each(DATA, function(i1, DIV) {
         var div = $('<div>').appendTo('body');
-        $('<h1>').text(i).appendTo(div);
+        anchor(i1, $('<h1>').text(i1).appendTo(div), '<h4>' );
 
-        $.each(DIV, function(i, SEC) {
+        $.each(DIV, function(i2, SEC) {
             var sec = $('<section>').appendTo(div);
-            $('<h2>').text(i).appendTo(sec).before($('<a id='+i+'>'));
+            anchor(i2, $('<h2>').text(i2).appendTo(sec), '<p>' );
 
-            $.each(SEC, function(i, ART) {
+            $.each(SEC, function(i3, ART) {
                 var art = $('<article>').appendTo(sec);
-                i = keyhoist(SEC, i);
-                $('<h3>').text('article ' + i).appendTo(art);
+                i3 = keyhoist(SEC, i3);
+                anchor([i2,i3], $('<h3>').text('article ' + i3).appendTo(art) );
+
                 textify(ART, art);
             });
         });
     });
 
+    function anchor(str, ele, wrap) {
+        var anc, lnk, pre = '';
+        if (typeof str === 'object') {
+            pre = str[0] + '-';
+            str = str[1];
+        }
+        wrap = wrap || '<button>';
+        // add anchor
+        anc = $('<a id="' + pre + str + '">');
+        ele.before(anc);
+
+        // make nav link
+        lnk = $('<a href="#'+ pre + str +'">');
+        lnk.text(str);
+        lnk.appendTo(nav).wrap(wrap);
+    }
 }

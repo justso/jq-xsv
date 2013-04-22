@@ -4,6 +4,12 @@ html {
 }
 div {
     border: 3px solid red;
+    margin-left: 22em;
+}
+nav {
+    border: 2px solid green;
+    position: fixed;
+    width: 20em;
 }
 section {
     border: 2px solid green;
@@ -13,7 +19,23 @@ article {
     border: 1px solid gray;
 }
 p {
-/*    font-family: monospace;
-    white-space: pre;
-*/
+    margin: 0;
+}
+button {
+    float: left;
+    padding: 0;
+}
+button a {
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    text-decoration: none;
+}
+
+nav h4 {
+    background-color: pink;
+    clear: both;
+}
+nav p {
+    background-color: #ccc;
+    clear: both;
 }
