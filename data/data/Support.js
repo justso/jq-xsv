@@ -4,7 +4,7 @@ var Support = {
         "content": "© 2012 Wells Fargo Bank, N.A. All rights reserved. ECG-727744"
     }, {
         "key": "share",
-        "content": "<div id=\"\"sharebar\"\">\\n            <script src=\"\"http://w.sharethis.com/button/buttons.js\"\"></script>\\n            <p class=\"\"cap\"\">Share this page                <!-- -->\\n                <span id=\"\"st_twitter\"\"></span>                <!-- -->\\n                <span id=\"\"st_linkedin\"\"></span>                <!-- -->\\n                <span id=\"\"st_email\"\"></span>                <!-- -->\\n                <span id=\"\"st_facebook\"\"></span>                <!-- -->\\n                <span id=\"\"st_googleplus\"\"></span>                <!-- -->\\n                <span id=\"\"st_pinterest\"\"></span>                <!-- -->\\n            </p>\\n            <script src=\"\"../script/share.js\"\"></script>\\n        </div>"
+        "content": "&lt;div id=\&quot;sharebar\&quot;&gt;\\n &lt;script src=\&quot;http://w.sharethis.com/button/buttons.js\&quot;&gt;&lt;/script&gt;\\n &lt;p class=\&quot;cap\&quot;&gt;Share this page &lt;!-- --&gt;\\n &lt;span id=\&quot;st_twitter\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_linkedin\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_email\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_facebook\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_googleplus\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;span id=\&quot;st_pinterest\&quot;&gt;&lt;/span&gt; &lt;!-- --&gt;\\n &lt;/p&gt;\\n &lt;s cript src=\&quot;../script/share.js\&quot;&gt;&lt;/script&gt;\\n &lt;/div&gt;"
     }],
     _COMPS: [{
         "key": "footer",

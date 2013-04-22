@@ -4,22 +4,21 @@
 
 function main() {
     console.log('main');
-    //    for each in data
-    // create div
-    // create section
-    // create article
-    var body = $('body');
+    DATA = {
+        Compositions: Compositions,
+        Giving: Giving,
+        Support: Support,
+    };
 
     function textify(obj, ele) {
         $.each(obj, function(i, e) {
-            var p =  $('<p>')
-            .append('<strong>' +i + '</strong>: ')
-            .append(e);
-            p.appendTo(ele)
+            var t = ('<strong>' +i + '</strong>: ') + e.replace(/\\n/g, '<br>'),
+            p =  $('<p>').html(t);
+            p.appendTo(ele);
         });
     }
     $.each(DATA, function(i, DIV) {
-        var div = $('<div>').appendTo(body);
+        var div = $('<div>').appendTo('body');
         $('<h1>').text(i).appendTo(div);
 
         $.each(DIV, function(i, SEC) {
@@ -28,7 +27,7 @@ function main() {
 
             $.each(SEC, function(i, ART) {
                 var art = $('<article>').appendTo(sec);
-                $('<h3>').text('article ' + i).appendTo(art);
+                $('<h3>').text('article ' + (i+1)).appendTo(art);
                 textify(ART, art);
             });
         });
