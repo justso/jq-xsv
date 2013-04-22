@@ -29,8 +29,24 @@ function main() {
         return key || (num + 1);
     }
 
-    function pretreat() {
-        //    search for x-refs %_
+    function pretreat(i, x) {
+        x = x || i;
+        if (typeof x === 'object') {
+            $.each(x, pretreat);
+        } else {
+            var arr = x.match && x.match(/\%_[\w]+/g); // search for x-refs %_
+            //   for each match
+            arr && $.each(arr, function (i, e){
+                var seg = e.split('_');
+                if (!seg) return;
+                seg.shift(); // drop token
+                //     resolve ref
+                clog('segs', seg, window[seg[0]]);
+                clog('segs', window[seg[0]][seg[1]]);
+                clog('segs', window[seg[0]][seg[1]][seg[2]]);
+            });
+        //     replace
+        }
     }
 
     function anchor(str, ele, wrap) {
