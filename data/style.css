@@ -1,27 +1,21 @@
 html {
-    font-family: Times;
     font-size: 14px;
+}
+h1, h2, h3 {
+    margin: 1rem 0 0 0;
 }
 div {
     border: 3px solid red;
-    margin-left: 22em;
-}
-nav {
-    background-color: #777;
-    border: 2px solid green;
-    position: fixed;
-    width: 20em;
-}
-h2, h3 {
-    margin: 1em 0 -0.5em 1em;
+    margin-left: 22rem;
+    padding: 0.5rem 1rem;
 }
 section {
     border: 2px solid green;
-    margin: 1em;
+    padding: 0.5rem 1rem;
 }
 article {
     border: 1px solid gray;
-    margin: 1em;
+    padding: 1rem;
 }
 p {
     margin: 0;
@@ -29,20 +23,30 @@ p {
 button {
     float: left;
     padding: 0;
+    margin: 0 -1px -1px 0;
 }
-button a {
-    display: inline-block;
-    padding: 0.25em 0.75em;
+a[href] {
+    padding: 0.25rem 0.75rem;
     text-decoration: none;
 }
-
-nav h4 {
+nav {
     background-color: #ccc;
+    border: 2px solid green;
+    position: fixed;
+    width: 21rem;
+}
+nav h4 {
+    background-color: #eee;
     clear: both;
     color: white;
     margin: 0;
+    padding: .5rem .25rem;
 }
 nav p {
-    background-color: #aaa;
-    clear: both;
+    background-color: #ddd;
+    clear: left;
+    float: left;
+    width: 33%;
+    padding: .25rem .25rem 1rem;
+    margin-top: 1px;
 }

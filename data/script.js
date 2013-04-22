@@ -29,6 +29,10 @@ function main() {
         return key || (num + 1);
     }
 
+    function pretreat() {
+        //    search for x-refs %_
+    }
+
     function anchor(str, ele, wrap) {
         var anc, lnk, pre = '';
 

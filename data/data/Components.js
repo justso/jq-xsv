@@ -84,7 +84,7 @@ var Components = {
     }, {
         "key": "steve",
         "Speakers": "Steve Ellis",
-        "title": "Head of Wells Fargo Wholesale Services", /*bad token " "*/
+        "title": "Head of Wells Fargo Wholesale Services",
         "src.pic": "%_FILES_steve",
         "src.vid": "%_FILES_steve-vid",
         "src.bio": "%_FILES_steve-bio"
