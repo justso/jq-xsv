@@ -85,4 +85,18 @@ function main() {
             });
         });
     });
+    groupie();
+}
+
+function groupie(args) {
+    var x = $();
+    $('button').each(function(i, e) {
+        x.push(e);
+        if ($(e).next().is('button')) {
+            clog(x.length);
+        } else {
+            x.wrapAll('<aside>');
+            x = $();
+        }
+    })
 }
