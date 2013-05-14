@@ -1,6 +1,7 @@
 /*jslint es5:true, white:false */
-/*globals $, Components, Compositions, Giving, Support, clog, console */
+/*globals $, Components, Compositions, DATA, Giving, Support, clog, console */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 
 function main() {
     console.log('main');
@@ -15,10 +16,11 @@ function main() {
     }
 
     function keyhoist(arr, num) {
+        // look inside object from array for a key to use instead of index
         var key = arr[num].key;
         if (key) {
-            clog(key, num);
-            arr[key] = arr[num];
+            clog('keyhoist', num, 'as', key);
+            arr[key] = arr[num]; // also ref from name as well as index
         }
         return key || (num + 1);
     }
@@ -30,9 +32,14 @@ function main() {
         } else {
             var arr = x.match && x.match(/\%_[\w]+/g); // search for x-refs %_
             //   for each match
-            arr && $.each(arr, function (i, e){
+            if (!arr) {
+                return;
+            }
+            $.each(arr, function (i, e){
                 var seg = e.split('_');
-                if (!seg) return;
+                if (!seg) {
+                    return;
+                }
                 seg.shift(); // drop token
                 //     resolve ref
                 clog('segs', seg, window[seg[0]]);
@@ -46,12 +53,11 @@ function main() {
     function anchor(str, ele, wrap) {
         var anc, lnk, pre = '';
 
+        // if array
         if (typeof str === 'object') {
             pre = str[0] + '-';
             str = str[1];
         }
-        wrap = wrap || '<button>';
-
         // add anchor
         anc = $('<a id="' + pre + str + '">');
         ele.before(anc);
@@ -59,7 +65,19 @@ function main() {
         // make nav link
         lnk = $('<a href="#' + pre + str + '">');
         lnk.text(str);
-        lnk.appendTo(nav).wrap(wrap);
+        lnk.appendTo(nav).wrap(wrap || '<button>');
+    }
+
+    function groupie(args) {
+        var x = $();
+        $('button').each(function(i, e) { //    take all buttons
+            var last = !($(e).next().is('button'));
+            x.push(e); //                       cache one by one
+            if (last) {
+                x.wrapAll('<aside>'); //        wrap adjacent buttons
+                x = $();
+            }
+        });
     }
 
     $.each(DATA, function (i1, DIV) {
@@ -82,15 +100,3 @@ function main() {
     groupie();
 }
 
-function groupie(args) {
-    var x = $();
-    $('button').each(function(i, e) {
-        x.push(e);
-        if ($(e).next().is('button')) {
-            clog(x.length);
-        } else {
-            x.wrapAll('<aside>');
-            x = $();
-        }
-    })
-}
