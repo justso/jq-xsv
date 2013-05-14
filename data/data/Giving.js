@@ -1,4 +1,4 @@
-var Giving = {
+DATA.Giving = {
     CEMINA: [{
         "heading": "CEMINA",
         "content": "CEMINA was founded by a group of women activists in Brazil who struggled to find a way to communicate with the public about aspirations, wishes, rights, and changes that women seek for themselves and for society as a whole. Through broadcast radio, CEMINA works to provide a platform for women to have a voice, air their opinions, and speak candidly about issues related to gender and human rights. Over the last decade, CEMINA has expanded to educate underserved communities of Brazil, providing access to a range of information and communication channels at low-to-no cost."

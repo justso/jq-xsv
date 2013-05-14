@@ -1,4 +1,4 @@
-var Compositions = {
+DATA.Compositions = {
     Index: [{
         "page": "home",
         "index": "1"

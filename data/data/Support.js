@@ -1,4 +1,4 @@
-var Support = {
+DATA.Support = {
     BLURBS: [{
         "key": "slug",
         "content": "© 2012 Wells Fargo Bank, N.A. All rights reserved. ECG-727744"

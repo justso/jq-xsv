@@ -1,4 +1,4 @@
-var Components = {
+DATA.Components = {
     Comps: [{
         "key": "footer",
         "content": "%_Support_BLURBS_slug + %_Support_BLURBS_share"

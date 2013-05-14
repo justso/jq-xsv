@@ -4,12 +4,6 @@
 
 function main() {
     console.log('main');
-    DATA = {
-        Support: Support,
-        Components: Components,
-        Giving: Giving,
-        Compositions: Compositions,
-    };
     var nav = $('nav');
 
     function textify(obj, ele) {
@@ -69,7 +63,7 @@ function main() {
     }
 
     $.each(DATA, function (i1, DIV) {
-        var div = $('<div>').appendTo('body');
+        var div = $('<div>').appendTo('body').attr('id',i1);
         anchor(['doc', i1], $('<h1>').text(i1).appendTo(div), '<h4>');
 
         $.each(DIV, function (i2, SEC) {
